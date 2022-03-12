@@ -2,7 +2,7 @@ import _pt from "prop-types";
 import React, { useMemo, useCallback, useState, useEffect, useRef } from 'react';
 import throttle from 'lodash.throttle';
 const animatedClass = 'animate__animated';
-const serverSide = typeof window === 'undefined';
+const serverSide = !window;
 let scrollableParentRefInitialValue = undefined;
 
 if (!serverSide) {
